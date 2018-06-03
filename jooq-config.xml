@@ -84,7 +84,7 @@
             jOOQ may append the schema name to this package if generating multiple schemas,
             e.g. org.jooq.your.packagename.schema1
             org.jooq.your.packagename.schema2 -->
-            <packageName>com.example.jq.sakila</packageName>
+            <packageName>com.example.jq.schema</packageName>
             <!-- The destination directory of your generated classes -->
             <directory>E:\workspace-vscode\jq\src\main\java</directory>
         </target>
