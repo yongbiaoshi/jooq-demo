@@ -4,8 +4,6 @@ import com.example.jq.schema.tables.pojos.City;
 import com.example.jq.service.CityService;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
-
 import java.util.List;
 
 
@@ -39,4 +37,15 @@ public class CityController {
     public int delete(@PathVariable Short id) {
         return cityService.delete(id);
     }
+
+    @PatchMapping("")
+    public int update(City city) {
+        return cityService.updateById(city);
+    }
+
+    @PatchMapping("tx")
+    public int updateCityTx(City city) {
+        return cityService.updateByIdAndRollback(city);
+    }
+
 }
